@@ -22,35 +22,35 @@
 	"max-width: 575": {
 		"prefix": "@max575",
 		"body": [
-			"@media(max-width: 575px){}",
+			"@media(max-width: 575px){$1}",
 		],
 		"description": "Max-width: 575px"
 	},
 	"max-width: 767": {
 		"prefix": "@max767",
 		"body": [
-			"@media(max-width: 767px){}",
+			"@media(max-width: 767px){$1}",
 		],
 		"description": "Max-width: 767px"
 	},
 	"max-width: 991": {
 		"prefix": "@max991",
 		"body": [
-			"@media(max-width: 991px){}",
+			"@media(max-width: 991px){$1}",
 		],
 		"description": "Max-width: 991px"
 	},
 	"max-width: 1199": {
 		"prefix": "@max1199",
 		"body": [
-			"@media(max-width: 1199px){}",
+			"@media(max-width: 1199px){$1}",
 		],
 		"description": "Max-width: 1199px"
 	},
 	"max-width: 1400": {
 		"prefix": "@max1400",
 		"body": [
-			"@media(max-width: 1400px){}",
+			"@media(max-width: 1400px){$1}",
 		],
 		"description": "Max-width: 1400px"
 	},
