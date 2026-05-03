@@ -1,0 +1,46 @@
+{
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "workbench.startupEditor": "none",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.minimap.enabled": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "breadcrumbs.enabled": false,
+    "editor.parameterHints.cycle": false,
+    "editor.parameterHints.enabled": false,
+    "editor.hover.enabled": "off",
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.tabs.defaultColor": "terminal.ansiBlack",
+    "editor.lineHeight": 1.5,
+    "editor.indentSize": "tabSize",
+    "editor.tabCompletion": "on",
+    "workbench.editor.tabSizingFixedMaxWidth": 150,
+    "editor.tabSize": 2,
+    "workbench.editorAssociations": {
+        "*.svg": "default"
+    },
+    "debug.disassemblyView.showSourceCode": false,
+    "workbench.activityBar.location": "hidden",
+    "editor.language.brackets": [
+        [
+            "{",
+            "}"
+        ],
+        [
+            "[",
+            "]"
+        ],
+        [
+            "(",
+            ")"
+        ]
+    ],
+    "editor.smoothScrolling": true,
+    "php.validate.executablePath": "/path/to/php.exe",
+    "workbench.editor.empty.hint": "hidden",
+    "chat.viewSessions.enabled": false,
+    "chat.contextUsage.enabled": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+}

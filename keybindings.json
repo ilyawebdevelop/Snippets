@@ -1,0 +1,21 @@
+// Поместите настраиваемые сочетания клавиш в этот файл, чтобы переопределить сочетания клавиш по умолчанию.auto[]
+[
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+c",
+        "command": "extension.ecsstractor_port_run"
+    },
+    {
+        "key": "alt+d",
+        "command": "editor.emmet.action.wrapWithAbbreviation"
+    }
+]

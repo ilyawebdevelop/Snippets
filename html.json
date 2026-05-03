@@ -15,21 +15,21 @@
   "ACF": {
     "prefix": "acf",
     "body": [
-      "<?= the_field('$2'); ?>",
+      "<?php the_field('$2'); ?>",
     ],
     "description": "ACF"
   },
   "ACFOPT": {
     "prefix": "acfopt",
     "body": [
-      "<?= the_field('$2, 'option'); ?>",
+      "<?php the_field('$2, 'option'); ?>",
     ],
     "description": "ACF opt"
   },
   "Repeater": {
     "prefix": "acfrepeat",
     "body": [
-      "<?=""if( have_rows('$1') ):""while( have_rows('$1') ) : the_row(); ?>""""<?""endwhile;""endif;""?>",
+      "<?php""if( have_rows('$1') ):""while( have_rows('$1') ) : the_row(); ?>""""<?""endwhile;""endif;""?>",
     ],
     "description": "ACF repeater"
   },
@@ -43,15 +43,15 @@
   "carbon_field_opt": {
     "prefix": "carbopt",
     "body": [
-			"<?php echo carbon_get_theme_option('$1'); ?>	"
+      "<?php echo carbon_get_theme_option('$1'); ?>"
     ],
     "description": "carbon-field options"
   },
   "carbon_repeater_start": {
     "prefix": "carb-repeat-start",
     "body": [
-      "<?php $items = carbon_get_the_post_meta('$1'); ?>",
-      "<?php foreach ($items as $item) : ?>	"
+      "<?php $$items = carbon_get_the_post_meta('$1'); ?>",
+      "<?php foreach ($$items as $$item) : ?>	"
     ],
     "description": "carbon-field repeat start"
   },
@@ -65,7 +65,7 @@
   "carbon_repeater_field": {
     "prefix": "carb-repeat-field",
     "body": [
-      "<?php echo $item['$1']; ?>"
+      "<?php echo $$item['$1']; ?>"
     ],
     "description": "carbon-field repeat field"
   },
@@ -83,23 +83,20 @@
     ],
     "description": "shortcode"
   },
-  "burger": {
-    "scope": "html",
-    "prefix": "g-burger",
+  "g-thumb": {
+    "prefix": "g-thumbnail",
     "body": [
-      "<button class=\"burger\" aria-label=\"Открыть меню\" aria-expanded=\"false\"  data-burger>",
-      "  <span class=\"burger__line\"></span>",
-      "</button>"
+      "<?= get_the_post_thumbnail_url(); ?>"
     ],
-    "description": "Snippet for burger btn"
+    "description": "shortcode"
   },
   "checkbox": {
     "scope": "html",
     "prefix": "g-checkbox",
     "body": [
-      "<label class=\"custom-checkbox\">",
-      "  <input type=\"checkbox\" class=\"custom-checkbox__field\">",
-      "  <span class=\"custom-checkbox__content\">$1</span>",
+      "<label class=\"checkboxLabel\">",
+      "  <input type=\"checkbox\" class=\"checkboxInput\">",
+      "  <span class=\"rect\">$1</span>",
       "</label>"
     ],
     "description": "Snippet for custom checkbox"
@@ -108,11 +105,11 @@
     "scope": "html",
     "prefix": "g-nav",
     "body": [
-      "<nav class=\"nav\" title=\"$1\">",
-      "  <ul class=\"nav__list\">",
-      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
-      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
-      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "<nav class=\"nav\">",
+      "  <ul>",
+      "    <li><a href=\"#\"></a></li>",
+      "    <li><a href=\"#\"></a></li>",
+      "    <li><a href=\"#\"></a></li>",
       "  </ul>",
       "</nav>"
     ],
@@ -122,11 +119,13 @@
     "scope": "html",
     "prefix": "g-social",
     "body": [
-      "<ul class=\"social\" title=\"$1\">",
-      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--fb\" aria-label=\"Наша страничка в Фейсбуке\"></a></li>",
-      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--vk\" aria-label=\"Наша страничка во Вконтакте\"></a></li>",
-      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--tw\" aria-label=\"Наша страничка в Твиттере\"></a></li>",
-      "</ul>"
+      "<div class=\"socials\">",
+      "<ul>",
+      "<li><a href=\"#\" target=\"_blank\"></a></li>",
+      "<li><a href=\"#\" target=\"_blank\"></a></li>",
+      "<li><a href=\"#\" target=\"_blank\"></a></li>",
+      "</ul>",
+      "</div>"
     ],
     "description": "Snippet for social links"
   },
@@ -154,25 +153,6 @@
     ],
     "description": "Snippet for basic swiper structure"
   },
-  "graph modal Btn": {
-    "prefix": "g-graph-btn",
-    "body": [
-      "<button class=\"btn-reset $1\" data-graph-path=\"$2\">$3</button>"
-    ],
-    "description": "Snippet for graph-modal btn"
-  },
-  "graph modal Structure": {
-    "prefix": "g-graph-modal",
-    "body": [
-      "<div class=\"graph-modal\">",
-      "  <div class=\"graph-modal__container\" role=\"dialog\" aria-modal=\"true\" data-graph-target=\"$1\">",
-      "    <button class=\"btn-reset graph-modal__close\" aria-label=\"Закрыть модальное окно\"></button>",
-      "    <div class=\"graph-modal__content\">$2</div>",
-      "  </div>",
-      "</div>"
-    ],
-    "description": "Snippet for graph-modal basic structure"
-  },
   "picture": {
     "prefix": "g-picture",
     "body": [
@@ -184,11 +164,13 @@
     ],
     "description": "Snippet for basic logo structure"
   },
-  "svgimg": {
+  "g-svg": {
     "scope": "html",
     "prefix": "g-svgimg",
     "body": [
-      "<img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">"
+      "<svg>",
+          "<use xlink:href=\"img/icons/icons.svg#$1\"></use>",         
+      "</svg>"
     ],
     "description": "Snippet for simple html svg images"
   },

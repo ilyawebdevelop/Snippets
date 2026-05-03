@@ -19,6 +19,13 @@
 		],
 		"description": "Max-width: custom"
 	},
+	"min-width: custom min": {
+		"prefix": "@min",
+		"body": [
+			"@media(min-width: $1px){$2}",
+		],
+		"description": "Min-width: custom"
+	},
 	"max-width: 575": {
 		"prefix": "@max575",
 		"body": [
